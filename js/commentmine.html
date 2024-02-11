@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is mine</h1>
+    <div id="lore">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima repudiandae, ab officiis voluptates dolor vitae aliquid possimus. Aspernatur reiciendis explicabo possimus vel velit necessitatibus tenetur, sequi dicta molestiae cum, doloremque, magnam officiis molestias odit recusandae quasi consectetur dolorem facere adipisci.</p>
+        <p>Ullam ducimus voluptatibus officia facilis aperiam fugiat alias? Impedit nulla accusantium rerum, debitis ipsum asperiores cum tempore quisquam odio placeat? Enim nemo sit dolore laudantium commodi. Atque, nemo aliquid eius sit amet commodi iusto, aliquam ex enim, deleniti dolor iure.</p>
+        <p>Aliquid explicabo sapiente excepturi accusantium, molestias dolorem itaque? At provident labore minus et, aperiam molestiae quae magnam alias ratione dicta explicabo possimus odit excepturi eius cumque non voluptas repellat! Repellat minus corrupti distinctio illum quae inventore magni quaerat laborum? Pariatur.</p>
+        <p>Sunt nostrum provident possimus ea, voluptatibus cumque similique tenetur ducimus corporis reiciendis rerum temporibus ipsam a nisi accusantium dignissimos quibusdam sint quidem necessitatibus, unde natus et porro quas. Pariatur excepturi temporibus sed esse mollitia corporis aspernatur asperiores eos veritatis consequuntur!</p>
+       
+
+    </div>
+   <div>
+    <textarea name="" id="area-box" cols="30" rows="10"></textarea>
+    <button id="btn">posting</button>
+   </div>
+    <script>
+        // step 1
+        document.getElementById('btn').addEventListener('click',function(){
+            // step 2
+            const areaBox=document.getElementById('area-box')
+            const Box=areaBox.value
+            // step-3
+            const areaDiv=document.getElementById('lore')
+            const p=document.createElement('p')
+            p.innerText=Box
+            areaDiv.appendChild(p)
+            // step-4
+            areaBox.value=''
+        })
+    </script>
+</body>
+</html>

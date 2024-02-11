@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom summary</title>
+</head>
+<body>
+    <h1>Final dom event handler</h1>
+    <h3 id="handlerStatus">Default text</h3>
+    <p id="input-text-display">default Input text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">Update</button>
+    <br><br>
+     <button onclick="handleOneclick()">handle event by onclick function</button>
+    <button id="event-listner">handle event by addlistener</button>
+    <script>
+        // option one
+        function handleOneclick(){
+            const handlerStatus=document.getElementById('handlerStatus')
+            handlerStatus.innerText='Handeled by monwar hossain'
+        }
+        // option two
+        document.getElementById('event-listner').addEventListener('click',function(){
+            const handlerStatus=document.getElementById('handlerStatus')
+            handlerStatus.innerText='text updated by listener'
+        })
+        // option two recap
+        document.getElementById('btn-update').addEventListener('click',function(){
+            const inputField=document.getElementById('input-field')
+            const inputText=inputField.value;
+
+            const p=document.getElementById('input-text-display')
+            p.innerText=inputText
+            inputField.value=''
+        })
+
+    </script>
+</body>
+</html>
